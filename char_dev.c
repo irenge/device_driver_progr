@@ -10,7 +10,7 @@ MODULE_AUTHOR("Jules Irenge");
 MODULE_DESCRIPTION("My first char device");
 MODULE_VERSION("1.0.0");
 
-static char kern_buf[100];
+static char kern_buf[200];
 static int dev_open(struct inode* inode, struct file* file);
 static ssize_t dev_read(struct file* file, char* buf, size_t len, loff_t* off);
 static ssize_t dev_write(struct file* file, const char* buf, size_t len, loff_t* off);
