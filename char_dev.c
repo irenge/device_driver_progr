@@ -27,7 +27,7 @@ static struct file_operations fops =
 
 static int __init chardev_init(void)
 {
-	int t=register_chrdev(90, "mydev" , &fops);
+	int t=register_chrdev(81, "medev" , &fops);
 	if(t<0)
 	{
 		printk(KERN_ERR "Problem registering character device \n");
@@ -73,7 +73,7 @@ static int dev_release(struct inode* inode, struct file* file)
 
 static void __exit  chardev_exit(void)
 {
-unregister_chrdev(90, "mydev");
+unregister_chrdev(81, "medev");
 printk(KERN_INFO "Goodbye World!\n");
 
 }
